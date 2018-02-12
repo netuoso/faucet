@@ -1,12 +1,14 @@
 # Steem faucet
 
 ## Install
+
 Download and install Node.js >= 7.7.1 then run
 ```
 yarn install
 ```
 
 ## Init database
+
 Set up and run migrations directly from the terminal using Sequelize CLI. Here is how to do:
 ```
 yarn exec -- sequelize db:migrate --url 'mysql://username:password@hostname:port/database'
@@ -19,6 +21,7 @@ If your local db server does not support SSL, change the `ssl` option to `false`
 Copy `.env.example` to `.env` and edit as needed.
 
 ## Run
+
 ```
 env $(tr "\\n" " " < .env) yarn start-dev # or just start, if you don't want nodemon
 ```
